@@ -9,32 +9,81 @@
   
   <title>Frontend Mentor | Intro section with dropdown navigation</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
 
-  Features
-  Company
-  Careers
-  About
+  <nav>
+    
+    <ul class="nav">
+      <li class="nav__item"><img src="images/logo.svg" alt="Snap" class="nav__logo"></li>
+      <li class="nav__item"><a href="#" class="nav__link">Features<img src="images/icon-arrow-down.svg" alt="navigation arrow" class="nav__arrow"></a></li>
+      <li class="nav__item"><a href="#" class="nav__link">Company<img src="images/icon-arrow-down.svg" alt="navigation arrow" class="nav__arrow"></a></li>
+      <li class="nav__item"><a href="#" class="nav__link">Careers</a></li>
+      <li class="nav__item"><a href="#" class="nav__link">About</a></li>
+      <li class="nav__item nav__login"><a href="#" class="nav__link">Login</a></li>
+      <li class="nav__item nav__register"><button class="nav__registerBtn">Register</button></li>
+    </ul>
 
-  Login
-  Register
+    <a href="#" class="nav__burguer"></a>
+    <div class="nav__sideMenu">
+      hey
+    </div>
 
-  Make remote work
+    <div class="dropdownFeatures">
+      <ul class="dropdownFeatures__list">
+        <li class="dropdownFeatures__feature"><img src="images/icon-todo.svg" alt="" class="dropdownFeatures__icon"><a href="#" class="dropdownFeatures__link">Todo List</a></li>
+        <li class="dropdownFeatures__feature"><img src="images/icon-calendar.svg" alt="" class="dropdownFeatures__icon"><a href="" class="dropdownFeatures__link">Calendar</a></li>
+        <li class="dropdownFeatures__feature"><img src="images/icon-reminders.svg" alt="" class="dropdownFeatures__icon"><a href="" class="dropdownFeatures__link">Reminders</a></li>
+        <li class="dropdownFeatures__feature"><img src="images/icon-planning.svg" alt="" class="dropdownFeatures__icon"><a href="" class="dropdownFeatures__link">Planning</a></li>
+      </ul>
 
-  Get your team in sync, no matter your location. Streamline processes, 
-  create team rituals, and watch productivity soar.
+    </div>
+    <div class="dropdownCompany">
+      <ul class="dropdownCompany_list">
+        <li class="dropdownCompany__item"><a href="#" class="dropdownCompany__link">History</a></li>
+        <li class="dropdownCompany__item"><a href="#" class="dropdownCompany__link">Our Team</a></li>
+        <li class="dropdownCompany__item"><a href="#" class="dropdownCompany__link">Blog</a></li>
+      </ul>
 
-  Learn more
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container">
+      <div class="main__content">
+        <h1 class="main__heading">Make remote Work</h1>
+        <p class="main__description">Get your team in sync, no matter your location. Streamline processes, 
+          create team rituals, and watch productivity soar.</p>
+        <button class="main__btn">Learn More</button>
+        <ul class="main__workedWithList">
+          <li class="main__workedWith"><img src="images/client-databiz.svg" alt="Worked with Databiz" class="main__workedWithLogo"></li>
+          <li class="main__workedWith"><img src="images/client-audiophile.svg" alt="Worked with Audiophile" class="main__workedWithLogo"></li>
+          <li class="main__workedWith"><img src="images/client-meet.svg" alt="Worked with Meet" class="main__workedWithLogo"></li>
+          <li class="main__workedWith"><img src="images/client-maker.svg" alt="Worked with Maker" class="main__workedWithLogo"></li>
+        </ul>
+      </div>  
+      <img src="images/image-hero-desktop.png" alt="hero image" class="main__img">
+
+    </div>
+  </main>
+
+
+<script src="main.js"></script>
 </body>
 </html>
+
+<!--
+Features
+Company
+Careers
+About
+
+Login
+Register
+
+Make remote work
+
+Get your team in sync, no matter your location. Streamline processes, 
+create team rituals, and watch productivity soar.
+
+Learn more-->
