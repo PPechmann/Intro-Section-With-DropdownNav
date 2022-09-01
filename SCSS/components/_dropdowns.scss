@@ -1,14 +1,10 @@
 .dropdownFeatures {
-    position: absolute;
-    top: 2.88rem;
-    left: 5.27rem;
-    height: 8.9rem;
-    width: 8.5rem;
     box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.1491);
     border-radius: .55rem;
     font-size: $fs-nav;
     color: $primary-grey;
-    padding: 1.33rem;
+    width: 0rem;
+    height: 0rem;
     visibility: hidden;
 
 
@@ -51,16 +47,12 @@
 
 
 .dropdownCompany {
-    position: absolute;
-    top: 2.88rem;
-    left: 15rem;
-    height: 7.11rem;
-    width: 6.44rem;
+    height: 0rem;
+    width: 0rem;
     box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.1491);
     border-radius: .55rem;
     font-size: $fs-nav;
     color: $primary-grey;
-    padding: 1.33rem;
     visibility: hidden;
 
     & ul {
@@ -92,12 +84,55 @@
 
 .toggleDropdownFeat {
     visibility: visible;
+    position: absolute;
+    top: 2.88rem;
+    left: 5.27rem;
+    height: 8.9rem;
+    width: 8.5rem;
+    padding: 1.33rem;
     animation: dropdownFeat .18s;
 }
 
 .toggleDropdownCompany {
     visibility: visible;
+    position: absolute;
+    top: 2.88rem;
+    left: 15rem;
+    height: 7.11rem;
+    width: 6.44rem;
+    padding: 1.33rem;
     animation: dropdownCompany .18s;
 }
+
+@media only screen and (max-width: 1350px) {
+    .dropdownFeatures {
+        left: 12rem;
+    }
+
+    .dropdownCompany {
+        left: 22rem;
+    }
+}
+
+@media only screen and (max-width: 1148px) {
+    .dropdownFeatures {
+        left: 12rem;
+    }
+
+    .dropdownCompany {
+        left: 22rem;
+    }
+}
+
+@media only screen and (max-width: 950px) {
+    .dropdownFeatures {
+        left: 12rem;
+    }
+
+    .dropdownCompany {
+        left: 20rem;
+    }
+}
+
 
 

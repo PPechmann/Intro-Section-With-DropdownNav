@@ -11,6 +11,31 @@
 
 </head>
 <body>
+  <div class="overlay"></div>
+
+  <div class="sideNav--hidden">
+    <ul class="sideNav">
+      <li class="sideNav__item"><a href="#" class="sideNav__link sideNavFeatLink">Features<img src="images/icon-arrow-down.svg" alt="navigation arrow" class="sideNav__arrow"></a></li>
+      <ul class="sideNavFeat__list">
+        <li class="sideNavFeat__feature"><img src="images/icon-todo.svg" alt="" class="sideNavFeat__icon"><a href="#" class="sideNavFeat__link">Todo List</a></li>
+        <li class="sideNavFeat__feature"><img src="images/icon-calendar.svg" alt="" class="sideNavFeat__icon"><a href="" class="sideNavFeat__link">Calendar</a></li>
+        <li class="sideNavFeat__feature"><img src="images/icon-reminders.svg" alt="" class="sideNavFeat__icon"><a href="" class="sideNavFeat__link">Reminders</a></li>
+        <li class="sideNavFeat__feature"><img src="images/icon-planning.svg" alt="" class="sideNavFeat__icon"><a href="" class="sideNavFeat__link">Planning</a></li>
+      </ul>
+      <li class="sideNav__item"><a href="#" class="sideNav__link sideNavCompanyLink">Company<img src="images/icon-arrow-down.svg" alt="navigation arrow" class="sideNav__arrow"></a></li>
+      <ul class="sideNavCompany__list sideNavCompany_list--visible">
+        <li class="sideNavCompany__item"><a href="#" class="sideNav__link">History</a></li>
+        <li class="sideNavCompany__item"><a href="#" class="sideNav__link">Our Team</a></li>
+        <li class="sideNavCompany__item"><a href="#" class="sideNav__link">Blog</a></li>
+      </ul>
+      <li class="sideNav__item"><a href="#" class="sideNav__link">Careers</a></li>
+      <li class="sideNav__item"><a href="#" class="sideNav__link">About</a></li>
+    </ul>
+    <div class="sideNav__loginContainer">
+      <a href="#" class="sideNav__login">Login</a>
+      <button class="sideNav__registerBtn">Register</button>
+    </div>
+  </div>
 
   <nav>
     
@@ -22,12 +47,11 @@
       <li class="nav__item"><a href="#" class="nav__link">About</a></li>
       <li class="nav__item nav__login"><a href="#" class="nav__link">Login</a></li>
       <li class="nav__item nav__register"><button class="nav__registerBtn">Register</button></li>
+      <li class="nav__burguer"><a href="#"></a></li>
     </ul>
 
-    <a href="#" class="nav__burguer"></a>
-    <div class="nav__sideMenu">
-      hey
-    </div>
+    
+
 
     <div class="dropdownFeatures">
       <ul class="dropdownFeatures__list">
@@ -62,7 +86,7 @@
           <li class="main__workedWith"><img src="images/client-maker.svg" alt="Worked with Maker" class="main__workedWithLogo"></li>
         </ul>
       </div>  
-      <img src="images/image-hero-desktop.png" alt="hero image" class="main__img">
+      <div class="main__img">
 
     </div>
   </main>
@@ -71,19 +95,3 @@
 <script src="main.js"></script>
 </body>
 </html>
-
-<!--
-Features
-Company
-Careers
-About
-
-Login
-Register
-
-Make remote work
-
-Get your team in sync, no matter your location. Streamline processes, 
-create team rituals, and watch productivity soar.
-
-Learn more-->

@@ -1,0 +1,53 @@
+@keyframes dropdownFeat {
+    0% {
+        height: 0rem;
+    }
+
+    25% {
+        height: 3rem;
+    }
+
+    50% {
+        height: 5rem;
+    }
+
+    75% {
+        height: 7rem;
+    }
+
+    100% {
+        height: 8.9rem;
+    }
+};
+
+@keyframes dropdownCompany {
+    0% {
+        height: 0rem;
+    }
+
+    25% {
+        height: 2.5rem;
+    }
+
+    50% {
+        height: 5rem;
+    }
+
+    75% {
+        height: 6.5rem;
+    }
+
+    100% {
+        height: 7.11rem;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
