@@ -11,23 +11,29 @@
 
 </head>
 <body>
-  <div class="overlay"></div>
 
-  <div class="sideNav--hidden">
+  <div class="overlay"></div> <!--overlay for the sidemenu background, when shown-->
+
+  <nav role="navigation" class="sideNav--hidden">
+
     <ul class="sideNav">
-      <li class="sideNav__item"><a href="#" class="sideNav__link sideNavFeatLink">Features<img src="images/icon-arrow-down.svg" alt="navigation arrow" class="sideNav__arrow"></a></li>
+      <li class="sideNav__item"><a href="#" class="sideNav__link sideNavFeatLink">Features<img src="images/icon-arrow-down.svg" alt="navigation arrow" class="sideNav__arrow"></a></li><!--Features Link-->
+      <!--Inner side navigation list, when features is clicked-->
       <ul class="sideNavFeat__list">
         <li class="sideNavFeat__feature"><img src="images/icon-todo.svg" alt="" class="sideNavFeat__icon"><a href="#" class="sideNavFeat__link">Todo List</a></li>
-        <li class="sideNavFeat__feature"><img src="images/icon-calendar.svg" alt="" class="sideNavFeat__icon"><a href="" class="sideNavFeat__link">Calendar</a></li>
-        <li class="sideNavFeat__feature"><img src="images/icon-reminders.svg" alt="" class="sideNavFeat__icon"><a href="" class="sideNavFeat__link">Reminders</a></li>
-        <li class="sideNavFeat__feature"><img src="images/icon-planning.svg" alt="" class="sideNavFeat__icon"><a href="" class="sideNavFeat__link">Planning</a></li>
+        <li class="sideNavFeat__feature"><img src="images/icon-calendar.svg" alt="" class="sideNavFeat__icon"><a href="#" class="sideNavFeat__link">Calendar</a></li>
+        <li class="sideNavFeat__feature"><img src="images/icon-reminders.svg" alt="" class="sideNavFeat__icon"><a href="#" class="sideNavFeat__link">Reminders</a></li>
+        <li class="sideNavFeat__feature"><img src="images/icon-planning.svg" alt="" class="sideNavFeat__icon"><a href="#" class="sideNavFeat__link">Planning</a></li>
       </ul>
-      <li class="sideNav__item"><a href="#" class="sideNav__link sideNavCompanyLink">Company<img src="images/icon-arrow-down.svg" alt="navigation arrow" class="sideNav__arrow"></a></li>
+
+      <li class="sideNav__item"><a href="#" class="sideNav__link sideNavCompanyLink">Company<img src="images/icon-arrow-down.svg" alt="navigation arrow" class="sideNav__arrow"></a></li><!--Company Link-->
+      <!--Inner side navigation list, when company is clicked-->
       <ul class="sideNavCompany__list sideNavCompany_list--visible">
         <li class="sideNavCompany__item"><a href="#" class="sideNav__link">History</a></li>
         <li class="sideNavCompany__item"><a href="#" class="sideNav__link">Our Team</a></li>
         <li class="sideNavCompany__item"><a href="#" class="sideNav__link">Blog</a></li>
       </ul>
+
       <li class="sideNav__item"><a href="#" class="sideNav__link">Careers</a></li>
       <li class="sideNav__item"><a href="#" class="sideNav__link">About</a></li>
     </ul>
@@ -35,9 +41,10 @@
       <a href="#" class="sideNav__login">Login</a>
       <button class="sideNav__registerBtn">Register</button>
     </div>
-  </div>
 
-  <nav>
+  </nav>
+
+  <nav role="navigation">
     
     <ul class="nav">
       <li class="nav__item"><img src="images/logo.svg" alt="Snap" class="nav__logo"></li>
@@ -49,9 +56,6 @@
       <li class="nav__item nav__register"><button class="nav__registerBtn">Register</button></li>
       <li class="nav__burguer"><a href="#"></a></li>
     </ul>
-
-    
-
 
     <div class="dropdownFeatures">
       <ul class="dropdownFeatures__list">
@@ -72,7 +76,7 @@
     </div>
   </nav>
 
-  <main>
+  <main role="main">
     <div class="container">
       <div class="main__content">
         <h1 class="main__heading">Make remote Work</h1>

@@ -1,0 +1,200 @@
+.sideNav {
+
+    z-index: 5;
+    
+    &--hidden {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .sideNav {
+        margin: 4.33rem 0rem 1.77rem 1.33rem;
+        list-style-type: none;
+        padding: 0;
+
+        &__item {
+            margin-bottom: .88rem;
+        }
+
+        &__link {
+            text-decoration: none;
+            font-size: 1rem;
+            color: $primary-grey;
+            line-height: 1.44rem;
+
+            &:hover {
+                color: $primary-black;
+            }
+
+            &:hover img {
+                filter: brightness(-100%);
+            }
+        }
+
+        &__arrow {
+            display: inline;
+            margin-left: .94rem;
+        }
+            
+        &--visible {
+            display: block;
+            position: absolute;
+            top: -1rem;
+            height: 70rem;
+            background-color: white;
+            left: 70vw;
+            width: 30vw;
+        }
+
+        &__loginContainer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__login {
+            text-decoration: none;
+            color: $primary-grey;
+            font-size: 1rem;
+            line-height: .88rem;
+            margin-bottom: .88rem;
+
+            &:hover {
+                color: $primary-black;
+            }
+        }
+        
+        &--hidden {
+            display: none;
+        }
+
+        &--visible {
+            display: block;
+        }
+    } 
+
+    .sideNavFeat {
+
+        &__list {
+            display: none;
+            list-style-type: none;
+
+            &--visible {
+                display: block;
+            }
+        }
+
+        &__icon {
+            display: inline-block;
+            margin-right: .88rem;
+        }
+
+        &__feature {
+            display: flex;
+            align-items: center;
+            margin-bottom: .88rem;
+        }
+
+        &__link {
+            text-decoration: none;
+            color: $primary-grey;
+
+            &:hover {
+                cursor: pointer;
+                color: $primary-black;
+            }
+        }
+    }
+
+    .sideNavCompany {
+        &__list {
+            display: none;
+            list-style-type: none;
+
+            &--visible {
+                display: block;
+            }
+        }
+
+        &__item {
+            margin-bottom: .88rem;
+        }
+
+        &__link {
+            text-decoration: none;
+            color: $primary-grey;
+
+            &:hover {
+                cursor: pointer;
+                color: $primary-black;
+            }
+        }
+    }
+}
+
+/*tablet and large phone 850px - 450px*/
+
+@media only screen and (max-width: 850px) {
+    .sideNav {
+
+        &--visible {
+            left: 60vw;
+            width: 40vw;
+        }
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .sideNav {
+
+        &--visible {
+            left: 50vw;
+            width: 50vw;
+        }
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .sideNav {
+
+        &--visible {
+            left: 30vw;
+            width: 70vw;
+        }
+    }
+}
+
+
+/*exclusively phone size, 376px*/
+@media only screen and (max-width: 376px) {
+
+    .sideNav {
+        margin: 4.33rem 0rem 1.77rem 1.33rem;
+
+        &__item {
+            margin-bottom: .88rem;
+        }
+
+        &__link {
+            font-size: .88rem;
+        }
+
+        &__login {
+            font-size: .88rem;
+        }
+
+        &--visible {
+            left: 40vw;
+            width: 60vw;
+            height: 55rem;
+        }
+    }   
+
+    .sideNavFeat {
+        &__link {
+            font-size: .88rem;
+        }
+    }
+
+}

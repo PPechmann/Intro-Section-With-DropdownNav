@@ -17,15 +17,6 @@ body {
     z-index: 0;
 }
 
-.sideNav {
-
-    z-index: 5;
-    
-    &--hidden {
-        display: none;
-    }
-}
-
 .nav {
     display: flex;
     list-style-type: none;
@@ -63,28 +54,13 @@ body {
         
     }
 
-    &__registerBtn {
-        background-color: white;
-        border: 1px solid $primary-black;
-        border-radius: 1rem;
-        padding: 0.72rem 1.28rem;
-        color: $primary-grey;
-
-        &:hover {
-            cursor: pointer;
-            color: $primary-black;
-        }
-    }
-
     &__burguer {
         display: none;
     }
 
     &__login {
-        margin-left: 30.28rem;
+        margin-left: 34.28rem;
     }
-
-
 }
 
 .container {
@@ -94,7 +70,6 @@ body {
     gap: 6.94rem;
     margin-top: 4.5rem;
 }
-
 
 .main {
 
@@ -119,22 +94,6 @@ body {
         width: 24.72rem;
     }
 
-    &__btn {
-        padding: .83rem 1.66rem;
-        font-weight: 700;
-        color: $primary-white;
-        background-color: #151515;
-        border: 1px solid $primary-black;
-        border-radius: .83rem;
-        margin-bottom: 5rem;
-
-        &:hover {
-            cursor: pointer;
-            background-color: white;
-            color: $primary-black;
-        }
-    }
-
     &__workedWithList {
         list-style-type: none;
         display: flex;
@@ -147,21 +106,23 @@ body {
         margin-right: $marright;
     }
 
-
     &__img {
         width: 26.67rem;
         height: 35.56rem;
         background-image: url("../../images/image-hero-desktop.png");
         background-size: cover;
-
     }
-
-
 }
 
 .invertArrow {
     transform: rotate(180deg);
 }
+
+
+/*Media Queries*/
+
+
+/*large sizes: 1426px - 1000px*/
 
 @media only screen and (max-width: 1426px) {
     .nav {
@@ -171,16 +132,8 @@ body {
     }
 }
 
-
-
 @media only screen and (max-width: 1350px) {
     .nav {
-
-
-        &__logo {
-            height: 2.95rem;
-            width: 9.2rem;
-        }
 
         &__login {
             margin-left: 0rem;
@@ -189,6 +142,7 @@ body {
 
     .container {
         gap: 1rem;
+        margin-top: 5.5rem;
     }
 
     .main {
@@ -208,19 +162,17 @@ body {
             height: 28rem;
             width: 22rem;
         }
-
-        &__btn {
-            margin-bottom: 7rem;
-        }
     }
-
 }
-
 
 @media only screen and (max-width: 1000px) {
     .nav {
-
         display: block;
+
+        &__logo {
+            height: 2.95rem;
+            width: 9.2rem;
+        }
 
         &__burguer {
             height: 2rem;
@@ -235,8 +187,7 @@ body {
             background-size: contain;
             transition: background .2s;
             z-index: 1000;
-
-            
+   
              &:hover {
                 transform: scale(1.2);
             }
@@ -246,153 +197,8 @@ body {
             }
         }
 
-
-
         &__link {
             display: none;
-        }
-
-
-        &__registerBtn {
-            display: none;
-        }
-    }
-
-    .sideNav {
-        margin: 4.33rem 0rem 1.77rem 1.33rem;
-        list-style-type: none;
-        padding: 0;
-
-        &__item {
-            margin-bottom: .88rem;
-        }
-
-        &__link {
-            text-decoration: none;
-            font-size: 1rem;
-            color: $primary-grey;
-            line-height: 1.44rem;
-
-            &:hover {
-                color: $primary-black;
-            }
-
-            &:hover img {
-                filter: brightness(-100%);
-            }
-        }
-
-        &__arrow {
-            display: inline;
-            margin-left: .94rem;
-        }
-            
-        &--visible {
-            display: block;
-            position: absolute;
-            top: -1rem;
-            height: 70rem;
-            background-color: white;
-            left: 70vw;
-            width: 30vw;
-        }
-
-        &__loginContainer {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        &__login {
-            text-decoration: none;
-            color: $primary-grey;
-            font-size: 1rem;
-            line-height: .88rem;
-            margin-bottom: .88rem;
-
-            &:hover {
-                color: $primary-black;
-            }
-        }
-
-        &__registerBtn {
-            color: $primary-grey;
-            font-size: 1rem;
-            padding: .72rem 2.33rem;
-            background-color: white;
-            border: 1px solid $primary-grey;
-            border-radius: .88rem;
-            width: 10.83rem;
-
-            &:hover {
-                color: $primary-black;
-            }
-        }
-
-        &--hidden {
-            display: none;
-        }
-
-        &--visible {
-            display: block;
-        }
-    } 
-
-    .sideNavFeat {
-
-        &__list {
-            display: none;
-            list-style-type: none;
-
-            &--visible {
-                display: block;
-            }
-        }
-
-        &__icon {
-            display: inline-block;
-            margin-right: .88rem;
-        }
-
-        &__feature {
-            display: flex;
-            align-items: center;
-            margin-bottom: .88rem;
-        }
-
-        &__link {
-            text-decoration: none;
-            color: $primary-grey;
-
-            &:hover {
-                cursor: pointer;
-                color: $primary-black;
-            }
-        }
-    }
-
-    .sideNavCompany {
-        &__list {
-            display: none;
-            list-style-type: none;
-
-            &--visible {
-                display: block;
-            }
-        }
-
-        &__item {
-            margin-bottom: .88rem;
-        }
-
-        &__link {
-            text-decoration: none;
-            color: $primary-grey;
-
-            &:hover {
-                cursor: pointer;
-                color: $primary-black;
-            }
         }
     }
 
@@ -410,7 +216,7 @@ body {
         &__content {
             order: 2;
             width: 100%;
-            padding: 0rem 1.6rem;
+            padding: 0rem 4rem;
         }
 
         &__img {
@@ -431,12 +237,6 @@ body {
             margin: 0rem 0rem 1.33rem 0rem;
         }
 
-        &__btn {
-            padding: .55rem 1.11rem;
-            font-size: .88rem;
-            margin-bottom: 5rem;
-        }
-
         &__workedWithList {
             padding: 0rem .88rem ;
             align-items: center;
@@ -450,25 +250,7 @@ body {
 
 }
 
-@media only screen and (max-width: 850px) {
-    .sideNav {
-
-        &--visible {
-            left: 60vw;
-            width: 40vw;
-        }
-    }
-}
-
-@media only screen and (max-width: 650px) {
-    .sideNav {
-
-        &--visible {
-            left: 50vw;
-            width: 50vw;
-        }
-    }
-}
+/*large phone 450px*/
 
 @media only screen and (max-width: 450px) {
     .nav {
@@ -485,15 +267,11 @@ body {
         }
     }
 
-    .sideNav {
-
-        &--visible {
-            left: 30vw;
-            width: 70vw;
-        }
-    }
-
     .main {
+
+        &__content {
+            padding: 0rem 1.6rem;
+        }
 
         &__heading {
             font-size: 2.2rem;
@@ -505,43 +283,11 @@ body {
     }
 }
 
+/*exclusively medium phone size, 376px*/
+
 @media only screen and (max-width: 376px) {
 
-    .sideNav {
-        margin: 4.33rem 0rem 1.77rem 1.33rem;
-
-        &__item {
-            margin-bottom: .88rem;
-        }
-
-        &__link {
-            font-size: .88rem;
-        }
-
-        &__login {
-            font-size: .88rem;
-        }
-
-        &__registerBtn {
-            font-size: .88rem;
-        }
-
-        &--visible {
-            left: 40vw;
-            width: 60vw;
-            height: 55rem;
-        }
-
-    }   
-
-    .sideNavFeat {
-        &__link {
-            font-size: .88rem;
-        }
-    }
-
     .nav {
-
        margin: 0;
 
         &__logo {
@@ -561,15 +307,14 @@ body {
         &__item {
             margin: 0;
         }
-
     }
-
 
     .main {
 
         &__content {
             padding: 0rem .88rem;
         }
+        
         &__img {
             height: 15.6rem;
             width: 100%;
@@ -590,10 +335,6 @@ body {
             width: 19.05rem;
             font-size: .88rem;
             line-height: 1.44rem;
-        }
-
-        &__btn {
-            margin-bottom: 2.66rem;
         }
     }
 }

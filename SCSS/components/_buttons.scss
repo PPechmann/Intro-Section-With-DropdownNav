@@ -1,0 +1,93 @@
+.nav {
+    &__registerBtn {
+        background-color: white;
+        border: 1px solid $primary-black;
+        border-radius: 1rem;
+        padding: 0.72rem 1.28rem;
+        color: $primary-grey;
+
+        &:hover {
+            cursor: pointer;
+            color: $primary-black;
+        }
+    }
+}
+
+.main {
+    &__btn {
+        padding: .83rem 1.66rem;
+        font-weight: 700;
+        color: $primary-white;
+        background-color: #151515;
+        border: 1px solid $primary-black;
+        border-radius: .83rem;
+        margin-bottom: 5rem;
+
+        &:hover {
+            cursor: pointer;
+            background-color: white;
+            color: $primary-black;
+        }
+    }
+}
+
+@media only screen and (max-width: 1350px) {
+
+    .main {
+
+        &__btn {
+            margin-bottom: 7rem;
+        }
+    }
+
+}
+
+@media only screen and (max-width: 1000px) {
+    .nav {
+        &__registerBtn {
+            display: none;
+        }
+    }
+
+    .sideNav {
+        &__registerBtn {
+            color: $primary-grey;
+            font-size: 1rem;
+            padding: .72rem 2.33rem;
+            background-color: white;
+            border: 1px solid $primary-grey;
+            border-radius: .88rem;
+            width: 10.83rem;
+
+            &:hover {
+                color: $primary-black;
+            }
+        }
+    }
+
+    .main {
+        &__btn {
+            font-size: .88rem;
+            margin-bottom: 5rem;
+        }
+    }
+}
+
+@media only screen and (max-width: 376px) {
+
+    .sideNav {
+        &__registerBtn {
+            font-size: .88rem;
+            width: 8rem;
+        }
+    }
+
+    .main {
+        &__btn {
+            margin-bottom: 2.66rem;
+        }
+    }
+       
+}
+
+ 

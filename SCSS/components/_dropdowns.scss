@@ -29,10 +29,8 @@
         &:last-child {
             margin-bottom: 0rem;
         }
-    
     }
 
-    
     &__link {
         text-decoration: none;
         color: $primary-grey;
@@ -82,6 +80,8 @@
     }
 }
 
+
+/*dropdown heights, padding and positions are added here to avoid pushing other elements on certain screen sizes*/
 .toggleDropdownFeat {
     visibility: visible;
     position: absolute;
@@ -91,6 +91,7 @@
     width: 8.5rem;
     padding: 1.33rem;
     animation: dropdownFeat .18s;
+    z-index: 100;
 }
 
 .toggleDropdownCompany {
@@ -102,25 +103,16 @@
     width: 6.44rem;
     padding: 1.33rem;
     animation: dropdownCompany .18s;
+    z-index: 100;
 }
 
 @media only screen and (max-width: 1350px) {
     .dropdownFeatures {
-        left: 12rem;
+        left: 7rem;
     }
 
     .dropdownCompany {
-        left: 22rem;
-    }
-}
-
-@media only screen and (max-width: 1148px) {
-    .dropdownFeatures {
-        left: 12rem;
-    }
-
-    .dropdownCompany {
-        left: 22rem;
+        left: 15rem;
     }
 }
 

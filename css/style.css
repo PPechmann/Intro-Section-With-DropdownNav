@@ -174,6 +174,68 @@ p {
   font-size: 1rem;
 }
 
+.nav__registerBtn {
+  background-color: white;
+  border: 1px solid #151515;
+  border-radius: 1rem;
+  padding: 0.72rem 1.28rem;
+  color: #686868;
+}
+.nav__registerBtn:hover {
+  cursor: pointer;
+  color: #151515;
+}
+
+.main__btn {
+  padding: 0.83rem 1.66rem;
+  font-weight: 700;
+  color: #FAFAFA;
+  background-color: #151515;
+  border: 1px solid #151515;
+  border-radius: 0.83rem;
+  margin-bottom: 5rem;
+}
+.main__btn:hover {
+  cursor: pointer;
+  background-color: white;
+  color: #151515;
+}
+
+@media only screen and (max-width: 1350px) {
+  .main__btn {
+    margin-bottom: 7rem;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .nav__registerBtn {
+    display: none;
+  }
+  .sideNav__registerBtn {
+    color: #686868;
+    font-size: 1rem;
+    padding: 0.72rem 2.33rem;
+    background-color: white;
+    border: 1px solid #686868;
+    border-radius: 0.88rem;
+    width: 10.83rem;
+  }
+  .sideNav__registerBtn:hover {
+    color: #151515;
+  }
+  .main__btn {
+    font-size: 0.88rem;
+    margin-bottom: 5rem;
+  }
+}
+@media only screen and (max-width: 376px) {
+  .sideNav__registerBtn {
+    font-size: 0.88rem;
+    width: 8rem;
+  }
+  .main__btn {
+    margin-bottom: 2.66rem;
+  }
+}
 .dropdownFeatures {
   box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.1491);
   border-radius: 0.55rem;
@@ -240,6 +302,7 @@ p {
   color: #151515;
 }
 
+/*dropdown heights, padding and positions are added here to avoid pushing other elements on certain screen sizes*/
 .toggleDropdownFeat {
   visibility: visible;
   position: absolute;
@@ -250,6 +313,7 @@ p {
   padding: 1.33rem;
   -webkit-animation: dropdownFeat 0.18s;
           animation: dropdownFeat 0.18s;
+  z-index: 100;
 }
 
 .toggleDropdownCompany {
@@ -262,22 +326,15 @@ p {
   padding: 1.33rem;
   -webkit-animation: dropdownCompany 0.18s;
           animation: dropdownCompany 0.18s;
+  z-index: 100;
 }
 
 @media only screen and (max-width: 1350px) {
   .dropdownFeatures {
-    left: 12rem;
+    left: 7rem;
   }
   .dropdownCompany {
-    left: 22rem;
-  }
-}
-@media only screen and (max-width: 1148px) {
-  .dropdownFeatures {
-    left: 12rem;
-  }
-  .dropdownCompany {
-    left: 22rem;
+    left: 15rem;
   }
 }
 @media only screen and (max-width: 950px) {
@@ -288,25 +345,6 @@ p {
     left: 20rem;
   }
 }
-body {
-  min-height: 100%;
-  min-width: 100%;
-  background-color: white;
-  position: relative;
-}
-
-.activateOverlay {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  z-index: 0;
-}
-
 .sideNav {
   z-index: 5;
 }
@@ -314,177 +352,7 @@ body {
   display: none;
 }
 
-.nav {
-  display: flex;
-  list-style-type: none;
-  align-items: center;
-  margin-left: 2rem;
-  margin-right: 2rem;
-  padding: 0;
-}
-.nav__item {
-  font-size: 0.77rem;
-  margin-right: 2rem;
-  color: #686868;
-}
-.nav__link {
-  text-decoration: none;
-  color: #686868;
-}
-.nav__link:hover {
-  cursor: pointer;
-  color: #151515;
-}
-.nav__link:hover img {
-  filter: brightness(-100%);
-}
-.nav__arrow {
-  display: inline;
-  margin-left: 0.44rem;
-  transition: all 0.3s ease-in-out;
-}
-.nav__registerBtn {
-  background-color: white;
-  border: 1px solid #151515;
-  border-radius: 1rem;
-  padding: 0.72rem 1.28rem;
-  color: #686868;
-}
-.nav__registerBtn:hover {
-  cursor: pointer;
-  color: #151515;
-}
-.nav__burguer {
-  display: none;
-}
-.nav__login {
-  margin-left: 30.28rem;
-}
-
-.container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 6.94rem;
-  margin-top: 4.5rem;
-}
-
-.main__content {
-  height: 22.22rem;
-  width: 30rem;
-}
-.main__heading {
-  line-height: 4.44rem;
-  color: #151515;
-  margin-bottom: 2.67rem;
-  width: 30rem;
-}
-.main__description {
-  font-size: 1rem;
-  color: #686868;
-  line-height: 1.55rem;
-  margin-bottom: 2.83rem;
-  font-weight: 500;
-  width: 24.72rem;
-}
-.main__btn {
-  padding: 0.83rem 1.66rem;
-  font-weight: 700;
-  color: #FAFAFA;
-  background-color: #151515;
-  border: 1px solid #151515;
-  border-radius: 0.83rem;
-  margin-bottom: 5rem;
-}
-.main__btn:hover {
-  cursor: pointer;
-  background-color: white;
-  color: #151515;
-}
-.main__workedWithList {
-  list-style-type: none;
-  display: flex;
-  flex-direction: row;
-  padding: 0;
-  margin: 0;
-}
-.main__workedWith {
-  margin-right: 2rem;
-}
-.main__img {
-  width: 26.67rem;
-  height: 35.56rem;
-  background-image: url("../../images/image-hero-desktop.png");
-  background-size: cover;
-}
-
-.invertArrow {
-  transform: rotate(180deg);
-}
-
-@media only screen and (max-width: 1426px) {
-  .nav__login {
-    margin-left: 30rem;
-  }
-}
-@media only screen and (max-width: 1350px) {
-  .nav__logo {
-    height: 2.95rem;
-    width: 9.2rem;
-  }
-  .nav__login {
-    margin-left: 0rem;
-  }
-  .container {
-    gap: 1rem;
-  }
-  .main__heading {
-    font-size: 3rem;
-    width: 20rem;
-    line-height: 3rem;
-    margin-bottom: 1.35rem;
-  }
-  .main__description {
-    margin-bottom: 1.5rem;
-  }
-  .main__img {
-    height: 28rem;
-    width: 22rem;
-  }
-  .main__btn {
-    margin-bottom: 7rem;
-  }
-}
 @media only screen and (max-width: 1000px) {
-  .nav {
-    display: block;
-  }
-  .nav__burguer {
-    height: 2rem;
-    width: 3rem;
-    margin: 0rem;
-    display: block;
-    position: relative;
-    bottom: 2.5rem;
-    float: right;
-    background-image: url("../../images/icon-menu.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    transition: background 0.2s;
-    z-index: 1000;
-  }
-  .nav__burguer:hover {
-    transform: scale(1.2);
-  }
-  .nav__burguer--closed {
-    background-image: url(../../images/icon-close-menu.svg);
-  }
-  .nav__link {
-    display: none;
-  }
-  .nav__registerBtn {
-    display: none;
-  }
   .sideNav {
     margin: 4.33rem 0rem 1.77rem 1.33rem;
     list-style-type: none;
@@ -531,18 +399,6 @@ body {
     margin-bottom: 0.88rem;
   }
   .sideNav__login:hover {
-    color: #151515;
-  }
-  .sideNav__registerBtn {
-    color: #686868;
-    font-size: 1rem;
-    padding: 0.72rem 2.33rem;
-    background-color: white;
-    border: 1px solid #686868;
-    border-radius: 0.88rem;
-    width: 10.83rem;
-  }
-  .sideNav__registerBtn:hover {
     color: #151515;
   }
   .sideNav--hidden {
@@ -593,6 +449,211 @@ body {
     cursor: pointer;
     color: #151515;
   }
+}
+/*tablet and large phone 850px - 450px*/
+@media only screen and (max-width: 850px) {
+  .sideNav--visible {
+    left: 60vw;
+    width: 40vw;
+  }
+}
+@media only screen and (max-width: 650px) {
+  .sideNav--visible {
+    left: 50vw;
+    width: 50vw;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .sideNav--visible {
+    left: 30vw;
+    width: 70vw;
+  }
+}
+/*exclusively phone size, 376px*/
+@media only screen and (max-width: 376px) {
+  .sideNav {
+    margin: 4.33rem 0rem 1.77rem 1.33rem;
+  }
+  .sideNav__item {
+    margin-bottom: 0.88rem;
+  }
+  .sideNav__link {
+    font-size: 0.88rem;
+  }
+  .sideNav__login {
+    font-size: 0.88rem;
+  }
+  .sideNav--visible {
+    left: 40vw;
+    width: 60vw;
+    height: 55rem;
+  }
+  .sideNavFeat__link {
+    font-size: 0.88rem;
+  }
+}
+body {
+  min-height: 100%;
+  min-width: 100%;
+  background-color: white;
+  position: relative;
+}
+
+.activateOverlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+
+.nav {
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  padding: 0;
+}
+.nav__item {
+  font-size: 0.77rem;
+  margin-right: 2rem;
+  color: #686868;
+}
+.nav__link {
+  text-decoration: none;
+  color: #686868;
+}
+.nav__link:hover {
+  cursor: pointer;
+  color: #151515;
+}
+.nav__link:hover img {
+  filter: brightness(-100%);
+}
+.nav__arrow {
+  display: inline;
+  margin-left: 0.44rem;
+  transition: all 0.3s ease-in-out;
+}
+.nav__burguer {
+  display: none;
+}
+.nav__login {
+  margin-left: 34.28rem;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6.94rem;
+  margin-top: 4.5rem;
+}
+
+.main__content {
+  height: 22.22rem;
+  width: 30rem;
+}
+.main__heading {
+  line-height: 4.44rem;
+  color: #151515;
+  margin-bottom: 2.67rem;
+  width: 30rem;
+}
+.main__description {
+  font-size: 1rem;
+  color: #686868;
+  line-height: 1.55rem;
+  margin-bottom: 2.83rem;
+  font-weight: 500;
+  width: 24.72rem;
+}
+.main__workedWithList {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  margin: 0;
+}
+.main__workedWith {
+  margin-right: 2rem;
+}
+.main__img {
+  width: 26.67rem;
+  height: 35.56rem;
+  background-image: url("../../images/image-hero-desktop.png");
+  background-size: cover;
+}
+
+.invertArrow {
+  transform: rotate(180deg);
+}
+
+/*Media Queries*/
+/*large sizes: 1426px - 1000px*/
+@media only screen and (max-width: 1426px) {
+  .nav__login {
+    margin-left: 30rem;
+  }
+}
+@media only screen and (max-width: 1350px) {
+  .nav__login {
+    margin-left: 0rem;
+  }
+  .container {
+    gap: 1rem;
+    margin-top: 5.5rem;
+  }
+  .main__heading {
+    font-size: 3rem;
+    width: 20rem;
+    line-height: 3rem;
+    margin-bottom: 1.35rem;
+  }
+  .main__description {
+    margin-bottom: 1.5rem;
+  }
+  .main__img {
+    height: 28rem;
+    width: 22rem;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .nav {
+    display: block;
+  }
+  .nav__logo {
+    height: 2.95rem;
+    width: 9.2rem;
+  }
+  .nav__burguer {
+    height: 2rem;
+    width: 3rem;
+    margin: 0rem;
+    display: block;
+    position: relative;
+    bottom: 2.5rem;
+    float: right;
+    background-image: url("../../images/icon-menu.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: background 0.2s;
+    z-index: 1000;
+  }
+  .nav__burguer:hover {
+    transform: scale(1.2);
+  }
+  .nav__burguer--closed {
+    background-image: url(../../images/icon-close-menu.svg);
+  }
+  .nav__link {
+    display: none;
+  }
   .container {
     flex-direction: column;
     margin-bottom: 5rem;
@@ -604,7 +665,7 @@ body {
   .main__content {
     order: 2;
     width: 100%;
-    padding: 0rem 1.6rem;
+    padding: 0rem 4rem;
   }
   .main__img {
     order: 1;
@@ -620,11 +681,6 @@ body {
     line-height: 1.6rem;
     margin: 0rem 0rem 1.33rem 0rem;
   }
-  .main__btn {
-    padding: 0.55rem 1.11rem;
-    font-size: 0.88rem;
-    margin-bottom: 5rem;
-  }
   .main__workedWithList {
     padding: 0rem 0.88rem;
     align-items: center;
@@ -634,18 +690,7 @@ body {
     margin-right: 1.55rem;
   }
 }
-@media only screen and (max-width: 850px) {
-  .sideNav--visible {
-    left: 60vw;
-    width: 40vw;
-  }
-}
-@media only screen and (max-width: 650px) {
-  .sideNav--visible {
-    left: 50vw;
-    width: 50vw;
-  }
-}
+/*large phone 450px*/
 @media only screen and (max-width: 450px) {
   .nav__logo {
     height: 2.5rem;
@@ -656,9 +701,8 @@ body {
     width: 2rem;
     bottom: 2rem;
   }
-  .sideNav--visible {
-    left: 30vw;
-    width: 70vw;
+  .main__content {
+    padding: 0rem 1.6rem;
   }
   .main__heading {
     font-size: 2.2rem;
@@ -667,30 +711,8 @@ body {
     font-size: 1rem;
   }
 }
+/*exclusively medium phone size, 376px*/
 @media only screen and (max-width: 376px) {
-  .sideNav {
-    margin: 4.33rem 0rem 1.77rem 1.33rem;
-  }
-  .sideNav__item {
-    margin-bottom: 0.88rem;
-  }
-  .sideNav__link {
-    font-size: 0.88rem;
-  }
-  .sideNav__login {
-    font-size: 0.88rem;
-  }
-  .sideNav__registerBtn {
-    font-size: 0.88rem;
-  }
-  .sideNav--visible {
-    left: 40vw;
-    width: 60vw;
-    height: 55rem;
-  }
-  .sideNavFeat__link {
-    font-size: 0.88rem;
-  }
   .nav {
     margin: 0;
   }
@@ -730,8 +752,5 @@ body {
     width: 19.05rem;
     font-size: 0.88rem;
     line-height: 1.44rem;
-  }
-  .main__btn {
-    margin-bottom: 2.66rem;
   }
 }/*# sourceMappingURL=style.css.map */

@@ -30,10 +30,16 @@ const sideNavFeatList = document.querySelector(".sideNavFeat__list");
 const sideNavCompanyList = document.querySelector(".sideNavCompany__list");
 
 
-
-
-
-
+/*removes all applied nav classes when resizing screen*/
+window.addEventListener("resize", () => {
+    dropdownCompany.classList.remove("toggleDropdownCompany");
+    navArrowCompany.classList.remove("invertArrow");
+    navArrowFeatures.classList.remove("invertArrow");
+    dropdownFeatures.classList.remove("toggleDropdownFeat");
+    sideNav.classList.remove("sideNav--visible");
+    overlay.classList.remove("activateOverlay");
+    navBurguer.classList.remove("nav__burguer--closed")
+});
 
 /*detects if another menu is active, then closes it*/
 function detectDropdown(e) {
@@ -49,7 +55,6 @@ function detectDropdown(e) {
     }
 }
 
-
 /*listener for features dropdown click*/
 featuresLink.addEventListener("click", (e) => {
     navArrowFeatures.classList.toggle("invertArrow");
@@ -60,7 +65,6 @@ featuresLink.addEventListener("click", (e) => {
     }
     });
 
-
 /*listener for company dropdown click*/
 companyLink.addEventListener("click", (e) => {
     navArrowCompany.classList.toggle("invertArrow");
@@ -69,9 +73,7 @@ companyLink.addEventListener("click", (e) => {
         navArrowFeatures.classList.toggle("invertArrow");
         dropdownFeatures.classList.toggle("toggleDropdownFeat");
     }
-
 });
-
 
 mainContent.addEventListener("click", (e) => {
     detectDropdown(e);
@@ -96,15 +98,21 @@ registerBtn.addEventListener("click", (e) => {
 
 /*listener for the tab and phone size burger menu*/
 navBurguer.addEventListener("click", (e) => {
+
+    if(sideNavCompanyList.classList.contains("sideNavCompany__list--visible")){
+        sideNavCompanyList.classList.remove("sideNavCompany__list--visible");
+        sideNavArrowCompany.classList.remove("invertArrow");
+    }
+
+    if(sideNavFeatList.classList.contains("sideNavFeat__list--visible")){
+        sideNavFeatList.classList.remove("sideNavFeat__list--visible");
+        sideNavArrowFeatures.classList.remove("invertArrow");
+    }
     sideNav.style.animation = "fadeIn .3s 1";
     sideNav.classList.toggle("sideNav--visible");
     navBurguer.classList.toggle("nav__burguer--closed");
     overlay.classList.toggle("activateOverlay");
 });
-
-
-
-
 
 /*listeners for the collapsable menu links (features and company)*/
 sideNavFeat.addEventListener("click", () => {
@@ -120,7 +128,7 @@ sideNavCompany.addEventListener("click", () => {
     sideNavArrowCompany.classList.toggle("invertArrow");
     sideNavCompanyList.classList.toggle("sideNavCompany__list--visible");
     if(sideNavFeatList.classList.contains("sideNavFeat__list--visible")){
-        sideNavArrowCompany.classList.toggle("invertArrow");
+        sideNavArrowFeatures.classList.toggle("invertArrow");
         sideNavFeatList.classList.toggle("sideNavFeat__list--visible");
     }
 });
